@@ -1,3 +1,4 @@
+<!-- [Use,Admin]登录页面 -->
 <template>
   <div v-if="loginModel === '注册'" class="container a-container" id="a-container">
     <form class="form" id="a-form">
@@ -25,7 +26,6 @@
     </form>
   </div>
 </template>
-
 
 <script setup lang="ts">
 import {ref} from 'vue'

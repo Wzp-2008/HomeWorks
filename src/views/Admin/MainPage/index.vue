@@ -1,6 +1,7 @@
+<!-- [Admin]管理页面 -->
 <template>
   <div class="MainHome">
-    MainIndex
+    [Admin]管理页面
   </div>
 </template>
 
