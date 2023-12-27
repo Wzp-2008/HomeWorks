@@ -1,13 +1,15 @@
-<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo"></a></p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Node-%3E%3Dv14.18.1-green">
-    <img src="https://img.shields.io/badge/Vue-v3.0-blue">
-    <img src="https://img.shields.io/badge/Java-%3E%3Dv1.8-orange">
-    <img src="https://img.shields.io/badge/SPRING%20BOOT-v2.7-green">
+<p style="text-align: center">
+  <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo" /></a>
 </p>
-<h2 align="center">⭐项目名称:HomeWorks⭐</h2>
-<h3 align="center">学校教师生作业管理系统</h3>
+
+<p style="text-align: center">
+  <img src="https://img.shields.io/badge/Node-%3E%3Dv14.18.1-green" alt="" />
+  <img src="https://img.shields.io/badge/Vue-v3.0-blue" alt="" />
+  <img src="https://img.shields.io/badge/Java-%3E%3Dv17-orange" alt="" />
+  <img src="https://img.shields.io/badge/SPRING%20BOOT-v2.7-green" alt="" />
+</p>
+<h2 style="text-align: center">⭐项目名称:HomeWorks⭐</h2>
+<h3 style="text-align: center">学校教师生作业管理系统</h3>
 
 
 **先写在前头的一些话：**
@@ -60,4 +62,6 @@
 
 ## 🍀 鸣谢
 
-<div align="center"><img alt="Logo" height="256" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png?_gl=1*avq98w*_ga*NjQ5OTM0MzUxLjE2NDY1NTIyMzQ.*_ga_V0XZL7QHEB*MTY0Njk2NjY2Mi4zLjAuMTY0Njk2NjY2Mi4w" width="256"/></div>
+<div style="text-align: center">
+  <img alt="Logo" height="256" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png?_gl=1*avq98w*_ga*NjQ5OTM0MzUxLjE2NDY1NTIyMzQ.*_ga_V0XZL7QHEB*MTY0Njk2NjY2Mi4zLjAuMTY0Njk2NjY2Mi4w" width="256"/>
+</div>
