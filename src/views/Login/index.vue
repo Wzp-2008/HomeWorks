@@ -1,22 +1,54 @@
-<!-- [Use,Admin]登录页面 -->
 <template>
-  <div v-if="loginModel === '注册'" class="container a-container" id="a-container">
+  <div
+    v-if="loginModel === '注册'"
+    class="container a-container"
+    id="a-container"
+  >
     <form class="form" id="a-form">
       <h2 class="form_title title">欢迎注册HomeWorks</h2>
-      <input class="form__input" type="text" placeholder="用户名" aria-label="用户名"/>
-      <input class="form__input" type="password" placeholder="密码" aria-label="密码"/>
-      <input class="form__input" type="password" placeholder="重复密码" aria-label="重复密码"/>
+      <input
+        class="form__input"
+        type="text"
+        placeholder="用户名"
+        aria-label="用户名"
+      />
+      <input
+        class="form__input"
+        type="password"
+        placeholder="密码"
+        aria-label="密码"
+      />
+      <input
+        class="form__input"
+        type="password"
+        placeholder="重复密码"
+        aria-label="重复密码"
+      />
       <div class="login-info">
         <a class="form__link" @click="switchModel('登陆')">使用账号登陆</a>
       </div>
       <button class="form__button button submit">注册</button>
     </form>
   </div>
-  <div v-else-if="loginModel === '登陆'" class="container b-container" id="b-container">
+  <div
+    v-else-if="loginModel === '登陆'"
+    class="container b-container"
+    id="b-container"
+  >
     <form class="form" id="b-form">
       <h2 class="form_title title">欢迎登陆HomeWorks</h2>
-      <input class="form__input" type="text" placeholder="用户名" aria-label="用户名"/>
-      <input class="form__input" type="password" placeholder="密码" aria-label="密码"/>
+      <input
+        class="form__input"
+        type="text"
+        placeholder="用户名"
+        aria-label="用户名"
+      />
+      <input
+        class="form__input"
+        type="password"
+        placeholder="密码"
+        aria-label="密码"
+      />
       <div class="login-info">
         <a class="form__link" @click="forgetPassword">忘记密码了？</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -28,22 +60,22 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue'
-import {ElMessage} from 'element-plus'
+import { ref } from "vue";
+import { ElMessage } from "element-plus";
 
-const loginModel = ref('登陆')
+const loginModel = ref("登陆");
 
 const forgetPassword = () => {
   ElMessage({
-    message: '忘记密码请联系QQ:3357223099',
+    message: "忘记密码请联系QQ:3357223099",
     grouping: true,
-    type: 'success'
-  })
-}
+    type: "success",
+  });
+};
 
 const switchModel = (model: string) => {
-  loginModel.value = model
-}
+  loginModel.value = model;
+};
 </script>
 
 <style scoped>
@@ -53,7 +85,9 @@ const switchModel = (model: string) => {
   --box-shadow: #000000;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -94,11 +128,15 @@ const switchModel = (model: string) => {
   background-color: #ecf0f3;
   transition: 0.25s ease;
   border-radius: 8px;
-  box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+  box-shadow:
+    inset 2px 2px 4px #d1d9e6,
+    inset -2px -2px 4px #f9f9f9;
 }
 
 .form__input:focus {
-  box-shadow: inset 4px 4px 4px #d1d9e6, inset -4px -4px 4px #f9f9f9;
+  box-shadow:
+    inset 4px 4px 4px #d1d9e6,
+    inset -4px -4px 4px #f9f9f9;
 }
 
 .form__link {
@@ -124,7 +162,7 @@ const switchModel = (model: string) => {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1.15px;
-  background-color: #4B70E2;
+  background-color: #4b70e2;
   color: #f9f9f9;
   box-shadow: var(--box-shadow);
   border: none;

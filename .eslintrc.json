@@ -21,11 +21,7 @@
     "rules": {
         "indent": [
             "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
+            2
         ],
         "quotes": [
             "error",
@@ -34,6 +30,9 @@
         "semi": [
             "error",
             "always"
+        ],
+        "vue/multi-word-component-names": [
+            "off"
         ]
     }
 }

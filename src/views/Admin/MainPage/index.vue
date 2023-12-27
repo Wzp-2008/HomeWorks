@@ -1,14 +1,7 @@
-<!-- [Admin]管理页面 -->
 <template>
-  <div class="MainHome">
-    [Admin]管理页面
-  </div>
+  <div class="MainHome">[Admin]管理页面</div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
