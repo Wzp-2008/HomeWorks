@@ -44,7 +44,7 @@
 
 ## ⚖️ 开源协议
 
-- 本项目是面向大众的，所以我们会进行开源,请遵循相关开源协议 [暂未定下](https://github.com/wzp-2008/blob/main/LICENSE)
+- 本项目是面向大众的，所以我们会进行开源,请遵循相关开源协议 [MIT license](https://github.com/wzp-2008/blob/main/LICENSE)
   的规则.
 - 众人拾柴火焰高，开源需要依靠大家的努力，请自觉遵守开源协议，弘扬开源精神，共建开源社区！
 
