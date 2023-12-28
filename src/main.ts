@@ -20,6 +20,5 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
 app.use(router);
-app.use(router);
 app.use(createPinia());
 app.mount("#app");
