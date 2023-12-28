@@ -1,5 +1,5 @@
 <template>
-  <div class="homeWord">
+  <div class="homework">
     <!-- 标题栏 -->
     <el-row>
       <el-col :span="24">
@@ -18,27 +18,25 @@
         <div class="tools">
           <!-- 工具栏内容 -->
           <el-menu
-              default-active="2"
-              class="el-menu-vertical-demo"
-              @select="handleSelect"
-              @open="handleOpen"
-              @close="handleClose"
-              background-color="#f2f2f2"
-              text-color="#333"
-              active-text-color="#409EFF"
+            default-active="2"
+            class="el-menu-vertical-demo"
+            @select="handleSelect"
+            @open="handleOpen"
+            @close="handleClose"
+            background-color="#f2f2f2"
+            text-color="#333"
+            active-text-color="#409EFF"
           >
             <el-menu-item index="1">
               <el-icon>
-                <IconMenu/>
+                <IconMenu />
               </el-icon>
-              <span slot="title">
-                首页
-              </span>
+              <span slot="title"> 首页 </span>
             </el-menu-item>
             <el-sub-menu index="2">
               <template #title>
                 <el-icon>
-                  <Location/>
+                  <Location />
                 </el-icon>
                 <span>学生管理</span>
               </template>
@@ -46,31 +44,31 @@
             </el-sub-menu>
             <el-menu-item index="3">
               <el-icon>
-                <Document/>
+                <Document />
               </el-icon>
               <span slot="title">班级信息管理</span>
             </el-menu-item>
             <el-menu-item index="4">
               <el-icon>
-                <Setting/>
+                <Setting />
               </el-icon>
               <span slot="title">作业提交管理</span>
             </el-menu-item>
             <el-menu-item index="5">
               <el-icon>
-                <Setting/>
+                <Setting />
               </el-icon>
               <span slot="title">作业点评管理</span>
             </el-menu-item>
             <el-menu-item index="6">
               <el-icon>
-                <Setting/>
+                <Setting />
               </el-icon>
               <span slot="title">作业信息</span>
             </el-menu-item>
             <el-menu-item index="7">
               <el-icon>
-                <Setting/>
+                <Setting />
               </el-icon>
               <span slot="title">个人信息</span>
             </el-menu-item>
@@ -87,58 +85,10 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import {ref} from 'vue'
-import AssignmentReviews from "../Router/AssignmentReviews.vue";
-import AssignmentSubmission from "../Router/AssignmentSubmission.vue";
-import ClassManagement from "../Router/ClassManagement.vue";
-import Home from "../Router/Home.vue";
-import JobInformation from "../Router/JobInformation.vue";
-import StudentManagement from "../Router/StudentManagement.vue";
-import UserAbout from "../Router/UserAbout.vue"
-
-// currentComponent 应该直接引用组件对象
-const currentComponent = ref(Home);
-
-// 使用导入的组件对象来更新 currentComponent 的值
-const handleSelect = (index: string) => {
-  switch (index) {
-    case '1':
-      currentComponent.value = Home;
-      break;
-    case '2-1':
-      currentComponent.value = StudentManagement;
-      break;
-    case '3':
-      currentComponent.value = ClassManagement;
-      break;
-    case '4':
-      currentComponent.value = AssignmentSubmission;
-      break;
-    case '5':
-      currentComponent.value = AssignmentReviews;
-      break;
-    case '6':
-      currentComponent.value = JobInformation;
-      break;
-    case '7':
-      currentComponent.value = UserAbout;
-      break;
-  }
-}
-
-
-// 方法定义
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
-.homeWord {
+.homework {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -168,7 +118,8 @@ const handleClose = (key: string, keyPath: string[]) => {
   margin-right: 10px;
 }
 
-.tools, .wordList {
+.tools,
+.wordList {
   height: calc(100vh - 50px);
   overflow-y: auto;
 }
