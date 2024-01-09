@@ -1,20 +1,25 @@
 <script setup lang="ts">
-import { RouteRecordName } from "vue-router";
+import { RouteRecordName, useRoute } from "vue-router";
 import { onBeforeMount, ref } from "vue";
 import type { Component } from "vue";
 import { useRouterStore } from "../../store/RouterStore.ts";
 
 const routers = ref<
-  { name: RouteRecordName; path: string; icon: Component | undefined }[]
+  { name: RouteRecordName; path: string; icon: Component | null | undefined }[]
 >([]);
+const actionRoute = ref<string>("");
 onBeforeMount(() => {
+  const route = useRoute();
+  actionRoute.value = route.fullPath;
   const routerStore = useRouterStore();
   const { router } = routerStore;
   for (let routerElement of router) {
     routers.value.push({
       name: routerElement.name!,
       path: routerElement.path,
-      icon: routerElement.meta.icon as Component | undefined,
+      icon: routerElement.meta
+        ? (routerElement.meta.icon as Component | undefined)
+        : null,
     });
   }
 });
@@ -31,7 +36,7 @@ onBeforeMount(() => {
     <el-container>
       <el-aside width="200px">
         <el-menu
-          default-active="2"
+          :default-active="actionRoute"
           background-color="#f2f2f2"
           text-color="#333"
           active-text-color="#409EFF"
