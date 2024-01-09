@@ -1,13 +1,12 @@
-import { createRouter, createWebHashHistory, useRouter } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import { useUserStore } from "../store/UserStore.ts";
 import { Auth } from "../entities/Auth.ts";
 import { useRouterStore } from "../store/RouterStore.ts";
-import { markRaw } from "vue";
-import { Menu } from "@element-plus/icons-vue";
+
 const routes = [
   {
     name: "index",
-    path: "/index",
+    path: "/",
     component: () => import("../views/main/index.vue"),
   },
   {
@@ -24,9 +23,13 @@ router.beforeEach((to) => {
   const userStore = useUserStore();
   const routerStore = useRouterStore();
 
+  const routes = router.getRoutes();
   const { router: routers } = routerStore;
-  for (const route of routers) {
-    router.addRoute("index", route);
+  if (routes.length === 2) {
+    for (const route of routers) {
+      router.addRoute("index", route);
+    }
+    return to.fullPath;
   }
 
   const { userLevel } = userStore;
