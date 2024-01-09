@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
-import { RouteRecord } from "vue-router";
+import { RouteRecordRaw } from "vue-router";
 export const useRouterStore = defineStore("router", {
-  state(): { router: RouteRecord[] } {
+  state(): { router: RouteRecordRaw[] } {
     return { router: [] };
   },
+  persist: true,
 });

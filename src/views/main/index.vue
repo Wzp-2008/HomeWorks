@@ -1,29 +1,16 @@
 <script setup lang="ts">
-import { RouteRecordName, useRouter } from "vue-router";
+import { RouteRecordName } from "vue-router";
 import { onBeforeMount, ref } from "vue";
 import type { Component } from "vue";
 import { useRouterStore } from "../../store/RouterStore.ts";
-import { Menu } from "@element-plus/icons-vue";
 
 const routers = ref<
   { name: RouteRecordName; path: string; icon: Component | undefined }[]
 >([]);
 onBeforeMount(() => {
-  const vueRouter = useRouter();
   const routerStore = useRouterStore();
-  routerStore.$patch({
-    router: [
-      {
-        name: "测试页面",
-        path: "test",
-        component: () => import("./test.vue"),
-        meta: { icon: Menu },
-      },
-    ],
-  });
   const { router } = routerStore;
   for (let routerElement of router) {
-    vueRouter.addRoute("index", routerElement);
     routers.value.push({
       name: routerElement.name!,
       path: routerElement.path,
